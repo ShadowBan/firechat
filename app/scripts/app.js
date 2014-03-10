@@ -13,6 +13,10 @@ angular.module('firechatApp', [
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/chat/:roomId', {
+        templateUrl: 'views/chat.html',
+        controller: 'ChatCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
