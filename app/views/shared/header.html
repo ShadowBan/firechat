@@ -6,7 +6,7 @@
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
       <li class="active">
-        <a href="#/chat/{{newRoom}}">New Chat</a>
+        <a ng-click="addChat()">New Chat</a>
       </li>
       <li ng-repeat="room in rooms">
         <a href='#/chat/{{room}}'>{{room}}</a>
