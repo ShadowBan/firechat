@@ -6,7 +6,6 @@ function updateSidebar() {
 
 $(window)
   .load(function() {
-      altert("IM LOADING YOUR WINDOW!");
       updateSidebar();
   })
   .resize(function(){
