@@ -88,9 +88,9 @@ body, html {
     }
 }
 
-#flow, #chat, #inbox, .container-liquid{
-    height: 100%;
-    position: relative;
+/* Navbar */
+.navbar{
+    margin-bottom: 0;
 }
 
 /* Flow */
@@ -101,6 +101,9 @@ body, html {
 /* Chat */
 #chat{
     margin: 0;
+    border-left-color: black;
+    border-left-style: dotted;
+    background: #CFCFCF;
     form{
         position: absolute;
         bottom: 0;

@@ -5,19 +5,24 @@ angular.module('firechatApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'firebase'
+  'firebase',
+  'ui.router'
 ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/chat/:roomId', {
-        templateUrl: 'views/chat.html',
-        controller: 'ChatCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
+  .config(function($stateProvider, $urlRouterProvider) {
+    
+    $urlRouterProvider.otherwise('/');
+    
+    $stateProvider
+        // HOME STATES AND NESTED VIEWS ========================================
+        .state('home', {
+            url: '/',
+            templateUrl: 'views/main.html',
+            controller: 'MainCtrl'
+        })
+        // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
+        .state('chat', {
+          url: '/chat/:roomId', 
+          templateUrl: 'views/chat.html',
+          controller: 'ChatCtrl'  
+        });      
   });

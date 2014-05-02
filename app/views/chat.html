@@ -3,7 +3,7 @@
     <div id="white-board" class="col-md-12" ></div>
     <div id="flux" class="col-md-12" ></div>
   </div>
-  <div id="chat" class="col-md-8 well" ng-controller="ChatCtrl">
+  <div id="chat" class="col-md-8" ng-controller="ChatCtrl">
     <div ng-cloak ng-repeat="message in messages">
       <em>{{message.from}}: </em>{{message.content}}
     </div>
