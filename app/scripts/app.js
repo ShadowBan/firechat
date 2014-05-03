@@ -20,7 +20,6 @@ angular.module('firechatApp', [
         })
         .state('chat', {
           url: '/chat/:roomId', 
-          templateUrl: 'views/chat.html',
-          controller: 'ChatCtrl'  
+          templateUrl: 'views/chat.html'
         });      
   });
